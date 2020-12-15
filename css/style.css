@@ -1,0 +1,225 @@
+
+body, html {
+    box-sizing: border-box;
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
+    color: #1b1632;
+  
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+:root{
+    --font-size-m: 1.3rem;
+    --font-size-l: 1.8rem;
+    --font-size-title: 3rem;
+    --margin-m: 1rem;
+    --margin-l: 3rem;
+    --padding-s: 0.5rem;
+    --padding-m: 1rem;
+}
+html{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    color: white;
+    font-size: var(--font-size-m);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1B1632;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*styles for main*/
+.container{
+    align-self: center;
+    width: 70rem;
+    display: grid;
+    grid-template-areas: 
+    "art1 art1 illu1"
+    "art2 art2 illu1"
+    "form form form"
+    "luck luck luck";
+}
+
+.article{
+    margin: var(--margin-l);
+    margin-bottom: 1.5rem;
+    padding: var(--padding-m);
+}
+.art1{
+    grid-area: art1;
+}
+.art2{
+    grid-area: art2;
+}
+
+
+.result{
+    grid-area: luck;
+    display: flex;
+    margin-top:var(--margin-m);
+    justify-content: center;
+    border:   #fe5b32 solid 3px;
+    border-radius: 5px;
+}
+
+
+.illu1{
+ grid-area: illu1;
+ display: block;
+ width: 20rem;
+ height: 20rem;
+ margin-right: var(--margin-l);
+ margin-top: var(--margin-l);
+ align-self: center;
+}
+
+.title{ 
+    font-size: var(--font-size-title);
+    margin: var(--margin-m);
+    font-family: 'Courgette', cursive;
+    color: white;
+    margin-left: 15rem;
+}
+
+.subtitle{
+ margin-bottom: 1.5rem;
+ font-size: var(--font-size-l);
+ font-family: 'Courgette', cursive;
+ color: #fe5b32;
+}
+
+/*styles for nav*/
+.nav{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    
+}
+.bg-image{
+    /*different class for background because the background can't be declared
+    in the nav because it has to be 50 rem big --> nav looks bad with 50 rem height*/
+    height: 50rem;
+    background-position: center;
+    background-image: url(../assets/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.nav__list{
+    margin-right: 4rem;
+    display: flex;
+    align-self: center;
+    
+}
+
+.nav__list--item a{
+    font-size: var(--font-size-m);
+    margin: var(--margin-m);
+   
+    color: white;
+}
+.nav__list--item a:hover{
+    color: #fe5b32;
+}
+
+
+
+
+/*styles for form*/
+.form{
+    margin: var(--margin-m);
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "question"
+    "topping"
+    "base"
+    "wrapping"
+    "button"
+    "answer";
+}
+
+
+
+label{
+    font-size: var(--font-size-m);
+    margin-right:var(--margin-m);
+}
+
+.form__section{
+    margin: var(--margin-m);
+    display: block;
+    
+}
+
+.form__button{
+    grid-area: button;
+    width: 20rem;
+    height: 3rem;
+    font-size: var(--font-size-m);
+    border-radius: 0.5rem;
+    background-color: #fe5b32;
+    color: white;
+}
+
+input{
+    padding: var(--padding-s);
+}
+select{
+    padding: var(--padding-s);
+}
+
+.result li{
+  list-style-type: none;
+  color :#fe5b32;
+}
+
+.luckForm{
+    background-image: url(../assets/form_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+
+.form__title{
+    grid-area: title;
+    justify-self:center;
+}
+
+.form__section--question{
+    grid-area: question;
+}
+
+.form__section--topping{
+    grid-area: topping;
+}
+
+.form__section--base{
+    grid-area: base;
+}
+
+.form__section--wrapping{
+    grid-area: wrapping;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap');
+    </style>
+    <title>Cupcake-inator fortune teller</title>
+</head>
+
+<body>
+    <div class="bg-image">
+        <nav class="nav">
+            <h1 class="title">Cupcake-inator</h1>
+            <ul class="nav__list">
+                <li class="nav__list--item"><a href="#what">What is the Cupcake-inator?</a></li>
+                <li class="nav__list--item"><a href="#how">How does it work?</a></li>
+                <li class="nav__list--item"><a href="#form">Determine your luck</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="container">
+       
+        <article class="article art1" id="what">
+            <h2 class="subtitle"> What is the Cupcake-inator?</h2>
+            <p>If you are a sweettooth you sure like cupcakes.
+                But did you know that you can now predict your future with the cupcake-inator. The cupcake-inator is a
+                clever machine that analyzes your ingredients to make a prediction.
+                But watch out how unhealthy you make your cupcake this could have devastating effects.</p>
+        </article>
+        
+        <img src="assets/bake_your_luck.png" class="illu1" alt="cupcake fortune teller illustration">
+        <article class="article art2" id="how">
+            <h2 class="subtitle">How does it work?</h2>
+            <p>Fill in the form down below. Type your question that you wanna ask the cupcake-inator. After you filled in your
+                question,
+                you can customize your cupcake in the form. You can chose a base and topping flavour and the colour of
+                your wrapping.
+            </p>
+          
+        </article>
+    
+
+        <article class="article luckForm" id="form">
+            <!-- form for determining luck-->
+          
+            <form name="cupcakeForm" class="form">
+                <h2 class="subtitle form__section form__title">Determine your luck</h2>
+                <p class="form__section form__section--question">
+                    <label>Question</label>
+                    <input type="text" id="question" placeholder="What is your question?" required>
+                </p>
+                <p class="form__section form__section--topping">
+                    <label>Topping flavour</label>
+                    <select name="topping">
+                      
+                    </select>
+                </p>
+                <p class="form__section form__section--base">
+                    <label>Base flavour</label>
+                    <select name="base">
+                     
+                    </select>
+                </p>
+                <p class="form__section form__section--wrapping">
+                    <label>Wrap colour</label>
+                    <select name="wrapping">
+                      
+                    </select>
+                </p>
+
+                <input type="submit" value="Determine your luck" class="form__button">
+
+            </form>
+            <!--end form-->
+         
+        </article>
+        
+        <article class="article result hidden">
+            <!--article will get a name once the luck is appended, the luck is an h2-->
+            <ul class="resultUl">
+
+            </ul>
+
+        </article>
+
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
